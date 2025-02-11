@@ -24,7 +24,7 @@ import time
 import signal
 
 
-PASSWORD = "123"  
+PASSWORD = "HanzzAltar"  
 LOCK_FILE = os.path.abspath(__file__) 
 ZSHRC_FILE = os.path.expanduser("~/.bashrc")  
 
